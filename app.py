@@ -20,7 +20,7 @@ async def lambda_handler(event=None, context=None):
 if __name__ == "__main__":
     event = {
         "body": {
-            "connectionString": "postgres://postgres:postgrespw@localhost:55001",
+            "connectionString": "postgres://postgres:postgres@localhost:5432",
             "sql": "SELECT * FROM users",
         },
     }
