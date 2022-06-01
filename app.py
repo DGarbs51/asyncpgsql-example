@@ -6,7 +6,7 @@ import asyncpg
 async def lambda_handler(event=None, context=None):
     conn = await asyncpg.connect(event["body"]["connectionString"])
 
-    sql = event['body']['sql']
+    sql = event["body"]["sql"]
 
     rows = await conn.fetch(sql)
 
